@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="PuzzleData" format=3 uid="uid://bg8ksnagiqtpc"]
+
+[ext_resource type="Script" uid="uid://t5nja51es7iy" path="res://puzzle_data.gd" id="1_6iqfw"]
+[ext_resource type="PackedScene" uid="uid://c1gnhhg4g08gj" path="res://piece Scenes/piece_0.tscn" id="1_g53et"]
+[ext_resource type="PackedScene" uid="uid://bbh3bj65cj2l0" path="res://piece Scenes/piece_1.tscn" id="2_ekt1m"]
+[ext_resource type="PackedScene" uid="uid://4p4xmue8xelt" path="res://piece Scenes/piece_2.tscn" id="3_e8y3u"]
+[ext_resource type="PackedScene" uid="uid://8ncxej3pbvx3" path="res://piece Scenes/piece_3.tscn" id="4_5j8i6"]
+[ext_resource type="PackedScene" uid="uid://bat5ppdxjarb3" path="res://piece Scenes/piece_4.tscn" id="5_2iscb"]
+[ext_resource type="PackedScene" uid="uid://cnyh6w6hg3jut" path="res://piece Scenes/piece_5.tscn" id="6_gohlq"]
+[ext_resource type="PackedScene" uid="uid://b0ptfcpspjx1v" path="res://piece Scenes/piece_6.tscn" id="7_qacrx"]
+[ext_resource type="PackedScene" uid="uid://pclf0b7qc7wi" path="res://piece Scenes/piece_7.tscn" id="8_ed1lh"]
+[ext_resource type="PackedScene" uid="uid://cxd5en13187bf" path="res://piece Scenes/piece_8.tscn" id="9_vgd0s"]
+[ext_resource type="PackedScene" uid="uid://ddvcrfxl2ghqr" path="res://piece Scenes/piece_9.tscn" id="10_yms4t"]
+[ext_resource type="PackedScene" uid="uid://c6jedsl7faj3k" path="res://piece Scenes/piece_10.tscn" id="11_nvjbe"]
+[ext_resource type="PackedScene" uid="uid://sam7fnl5oc7l" path="res://piece Scenes/piece_11.tscn" id="12_48o1h"]
+[ext_resource type="PackedScene" uid="uid://bwv1sxlbyk2v6" path="res://piece Scenes/piece_12.tscn" id="13_cr7p8"]
+[ext_resource type="PackedScene" uid="uid://d04svrod753rx" path="res://piece Scenes/piece_13.tscn" id="14_fihfq"]
+[ext_resource type="PackedScene" uid="uid://d3i8jhkbx3a7n" path="res://piece Scenes/piece_14.tscn" id="15_6ebvu"]
+[ext_resource type="PackedScene" uid="uid://cehatfkdh6onx" path="res://piece Scenes/piece_15.tscn" id="16_l8nm4"]
+[ext_resource type="PackedScene" uid="uid://c507uu6hug1w2" path="res://piece Scenes/piece_16.tscn" id="17_68k00"]
+[ext_resource type="PackedScene" uid="uid://bayb0op4cgan6" path="res://piece Scenes/piece_17.tscn" id="18_tcxjc"]
+[ext_resource type="PackedScene" uid="uid://bes55apsxmo6y" path="res://piece Scenes/piece_18.tscn" id="19_ws6u8"]
+[ext_resource type="PackedScene" uid="uid://bogyr3xedq8vd" path="res://piece Scenes/piece_19.tscn" id="20_0d3in"]
+
+[resource]
+script = ExtResource("1_6iqfw")
+puzzle_graph = Array[Transform2D]([Transform2D(1, 0, 0, 1, 1341, 681), Transform2D(1, 0, 0, 1, -92, 1306), Transform2D(1, 0, 0, 1, 709, 1489), Transform2D(1, 0, 0, 1, 489, 37), Transform2D(1, 0, 0, 1, 49, 140), Transform2D(1, 0, 0, 1, -245, 634), Transform2D(1, 0, 0, 1, -902, 1407), Transform2D(1, 0, 0, 1, -1009, 799), Transform2D(1, 0, 0, 1, -1519, 401), Transform2D(1, 0, 0, 1, -515, 40), Transform2D(1, 0, 0, 1, 99, -53), Transform2D(1, 0, 0, 1, -1532, -295), Transform2D(1, 0, 0, 1, -734, -979), Transform2D(1, 0, 0, 1, -1332, -993), Transform2D(1, 0, 0, 1, -19, -441), Transform2D(1, 0, 0, 1, -13, -1519), Transform2D(1, 0, 0, 1, 1513, -346), Transform2D(1, 0, 0, 1, 660, -824), Transform2D(1, 0, 0, 1, 1266, -915), Transform2D(1, 0, 0, 1, 742, -1561)])
+num_pieces = 20
+pieces = Array[PackedScene]([ExtResource("1_g53et"), ExtResource("2_ekt1m"), ExtResource("3_e8y3u"), ExtResource("4_5j8i6"), ExtResource("5_2iscb"), ExtResource("6_gohlq"), ExtResource("7_qacrx"), ExtResource("8_ed1lh"), ExtResource("9_vgd0s"), ExtResource("10_yms4t"), ExtResource("11_nvjbe"), ExtResource("12_48o1h"), ExtResource("13_cr7p8"), ExtResource("14_fihfq"), ExtResource("15_6ebvu"), ExtResource("16_l8nm4"), ExtResource("17_68k00"), ExtResource("18_tcxjc"), ExtResource("19_ws6u8"), ExtResource("20_0d3in")])
+metadata/_custom_type_script = "uid://t5nja51es7iy"

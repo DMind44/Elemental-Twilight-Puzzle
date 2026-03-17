@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bfjnfoayvguhq"]
+
+[ext_resource type="Script" uid="uid://duo5dtgknthqb" path="res://puzzle-graph.gd" id="1_2fbch"]
+[ext_resource type="Resource" uid="uid://bg8ksnagiqtpc" path="res://puzzle_data.tres" id="2_ntmao"]
+[ext_resource type="PackedScene" uid="uid://c1gnhhg4g08gj" path="res://piece Scenes/piece_0.tscn" id="3_807dj"]
+[ext_resource type="PackedScene" uid="uid://bbh3bj65cj2l0" path="res://piece Scenes/piece_1.tscn" id="4_2fbch"]
+[ext_resource type="PackedScene" uid="uid://4p4xmue8xelt" path="res://piece Scenes/piece_2.tscn" id="5_ntmao"]
+[ext_resource type="PackedScene" uid="uid://8ncxej3pbvx3" path="res://piece Scenes/piece_3.tscn" id="6_7u5v4"]
+[ext_resource type="PackedScene" uid="uid://bat5ppdxjarb3" path="res://piece Scenes/piece_4.tscn" id="7_0ggto"]
+[ext_resource type="PackedScene" uid="uid://cnyh6w6hg3jut" path="res://piece Scenes/piece_5.tscn" id="8_ygnaj"]
+[ext_resource type="PackedScene" uid="uid://b0ptfcpspjx1v" path="res://piece Scenes/piece_6.tscn" id="9_rcf1w"]
+[ext_resource type="PackedScene" uid="uid://pclf0b7qc7wi" path="res://piece Scenes/piece_7.tscn" id="10_dm0py"]
+[ext_resource type="PackedScene" uid="uid://cxd5en13187bf" path="res://piece Scenes/piece_8.tscn" id="11_5cgxh"]
+[ext_resource type="PackedScene" uid="uid://ddvcrfxl2ghqr" path="res://piece Scenes/piece_9.tscn" id="12_044r5"]
+[ext_resource type="PackedScene" uid="uid://c6jedsl7faj3k" path="res://piece Scenes/piece_10.tscn" id="13_c2iis"]
+[ext_resource type="PackedScene" uid="uid://sam7fnl5oc7l" path="res://piece Scenes/piece_11.tscn" id="14_540yw"]
+[ext_resource type="PackedScene" uid="uid://bwv1sxlbyk2v6" path="res://piece Scenes/piece_12.tscn" id="15_1gb8m"]
+[ext_resource type="PackedScene" uid="uid://d04svrod753rx" path="res://piece Scenes/piece_13.tscn" id="16_ubnhy"]
+[ext_resource type="PackedScene" uid="uid://d3i8jhkbx3a7n" path="res://piece Scenes/piece_14.tscn" id="17_n3tgr"]
+[ext_resource type="PackedScene" uid="uid://cehatfkdh6onx" path="res://piece Scenes/piece_15.tscn" id="18_54qyo"]
+[ext_resource type="PackedScene" uid="uid://c507uu6hug1w2" path="res://piece Scenes/piece_16.tscn" id="19_stn6q"]
+[ext_resource type="PackedScene" uid="uid://bayb0op4cgan6" path="res://piece Scenes/piece_17.tscn" id="20_6lho3"]
+[ext_resource type="PackedScene" uid="uid://bes55apsxmo6y" path="res://piece Scenes/piece_18.tscn" id="21_qn053"]
+[ext_resource type="PackedScene" uid="uid://bogyr3xedq8vd" path="res://piece Scenes/piece_19.tscn" id="22_l5wdv"]
+
+[node name="Pieces" type="Node2D" unique_id=48366985]
+script = ExtResource("1_2fbch")
+puzzle_data = ExtResource("2_ntmao")
+position_matrix = Array[Transform2D]([Transform2D(1, 0, 0, 1, 1341, 681), Transform2D(1, 0, 0, 1, -92, 1306), Transform2D(1, 0, 0, 1, 709, 1489), Transform2D(1, 0, 0, 1, 489, 37), Transform2D(1, 0, 0, 1, 49, 140), Transform2D(1, 0, 0, 1, -245, 634), Transform2D(1, 0, 0, 1, -902, 1407), Transform2D(1, 0, 0, 1, -1009, 799), Transform2D(1, 0, 0, 1, -1519, 401), Transform2D(1, 0, 0, 1, -515, 40), Transform2D(1, 0, 0, 1, 99, -53), Transform2D(1, 0, 0, 1, -1532, -295), Transform2D(1, 0, 0, 1, -734, -979), Transform2D(1, 0, 0, 1, -1332, -993), Transform2D(1, 0, 0, 1, -19, -441), Transform2D(1, 0, 0, 1, -13, -1519), Transform2D(1, 0, 0, 1, 1513, -346), Transform2D(1, 0, 0, 1, 660, -824), Transform2D(1, 0, 0, 1, 1266, -915), Transform2D(1, 0, 0, 1, 742, -1561)])
+
+[node name="Piece0" parent="." unique_id=819882565 instance=ExtResource("3_807dj")]
+position = Vector2(1341, 681)
+
+[node name="Piece1" parent="." unique_id=1837862689 instance=ExtResource("4_2fbch")]
+position = Vector2(-92, 1306)
+
+[node name="Piece2" parent="." unique_id=914498798 instance=ExtResource("5_ntmao")]
+position = Vector2(709, 1489)
+
+[node name="Piece3" parent="." unique_id=747714794 instance=ExtResource("6_7u5v4")]
+position = Vector2(489, 37)
+
+[node name="Piece4" parent="." unique_id=1720048392 instance=ExtResource("7_0ggto")]
+position = Vector2(49, 140)
+
+[node name="Piece5" parent="." unique_id=667306416 instance=ExtResource("8_ygnaj")]
+position = Vector2(-245, 634)
+
+[node name="Piece6" parent="." unique_id=1259498234 instance=ExtResource("9_rcf1w")]
+position = Vector2(-902, 1407)
+
+[node name="Piece7" parent="." unique_id=1467056580 instance=ExtResource("10_dm0py")]
+position = Vector2(-1009, 799)
+
+[node name="Piece8" parent="." unique_id=1894555432 instance=ExtResource("11_5cgxh")]
+position = Vector2(-1519, 401)
+
+[node name="Piece9" parent="." unique_id=1465094301 instance=ExtResource("12_044r5")]
+position = Vector2(-515, 40)
+
+[node name="Piece10" parent="." unique_id=1073616729 instance=ExtResource("13_c2iis")]
+position = Vector2(99, -53)
+
+[node name="Piece11" parent="." unique_id=1240899341 instance=ExtResource("14_540yw")]
+position = Vector2(-1532, -295)
+
+[node name="Piece12" parent="." unique_id=1188150885 instance=ExtResource("15_1gb8m")]
+position = Vector2(-702, -964)
+
+[node name="Piece13" parent="." unique_id=1876282593 instance=ExtResource("16_ubnhy")]
+position = Vector2(-1332, -993)
+
+[node name="Piece14" parent="." unique_id=1221632875 instance=ExtResource("17_n3tgr")]
+position = Vector2(-19, -441)
+
+[node name="Piece15" parent="." unique_id=1084442021 instance=ExtResource("18_54qyo")]
+position = Vector2(-34, -1480)
+
+[node name="Piece16" parent="." unique_id=1912858961 instance=ExtResource("19_stn6q")]
+position = Vector2(1513, -346)
+
+[node name="Piece17" parent="." unique_id=1481751290 instance=ExtResource("20_6lho3")]
+position = Vector2(660, -824)
+
+[node name="Piece18" parent="." unique_id=2092051337 instance=ExtResource("21_qn053")]
+position = Vector2(1266, -915)
+
+[node name="Piece19" parent="." unique_id=1360411225 instance=ExtResource("22_l5wdv")]
+position = Vector2(742, -1561)
