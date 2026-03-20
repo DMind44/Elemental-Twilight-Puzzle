@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bovjmnoimamat" path="res://puzzle.gd" id="1_03ub4"]
 [ext_resource type="Resource" uid="uid://bg8ksnagiqtpc" path="res://puzzle_data.tres" id="2_77j1r"]
+[ext_resource type="Script" uid="uid://dmxfmbxc81utd" path="res://camera_controller.gd" id="3_hgotr"]
 
 [node name="Puzzle" type="Node2D" unique_id=579814574]
 script = ExtResource("1_03ub4")
@@ -9,3 +10,4 @@ puzzle_data = ExtResource("2_77j1r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=552757220]
 zoom = Vector2(0.11, 0.11)
+script = ExtResource("3_hgotr")

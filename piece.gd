@@ -8,6 +8,7 @@ extends Area2D
 var is_dragging := false
 var initial_pos := Vector2.ZERO
 var mouse_inside := false
+var drag_offset := Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,6 +36,7 @@ func _input(event):
 		get_viewport().set_input_as_handled()
 		if event.is_pressed():
 			print("click. Index: ", index)
+			drag_offset = position - get_global_mouse_position()
 			is_dragging = true
 			move_to_front()
 		if event.is_released():
@@ -45,4 +47,4 @@ func _process(_delta):
 	if Engine.is_editor_hint():
 		pass
 	if is_dragging:
-		position = get_global_mouse_position()
+		position = get_global_mouse_position() + drag_offset
