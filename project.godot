@@ -15,6 +15,14 @@ run/main_scene="uid://dk3l02a5ido0f"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://c47mf1fw0gg0r"
+
+[global_group]
+
+connection=""
+
 [input]
 
 zoom_in={

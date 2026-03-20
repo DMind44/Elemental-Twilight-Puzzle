@@ -9,5 +9,7 @@ script = ExtResource("1_03ub4")
 puzzle_data = ExtResource("2_77j1r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=552757220]
-zoom = Vector2(0.11, 0.11)
+zoom = Vector2(0.06, 0.06)
 script = ExtResource("3_hgotr")
+zoom_speed = 0.01
+initial_zoom = 0.1
