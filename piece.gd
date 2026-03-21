@@ -5,10 +5,10 @@ extends Area2D
 @export_tool_button("Sync Area to Polygon", "EditorIcons") var puzzle_create_button: Callable = _on_button_pressed
 
 const CONNECTION_SCENE = preload("res://connection.tscn")
+@onready var puzzle_data: PuzzleData = get_node("/root/Global").data
 
 var is_dragging := false
 var initial_pos := Vector2.ZERO
-var mouse_inside := false
 var drag_offset := Vector2.ZERO
 
 var connection_offset := Vector2.ZERO
@@ -16,8 +16,9 @@ var is_grouped := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	mouse_entered.connect(_on_mouse_entered)
-	mouse_exited.connect(_on_mouse_exited)
+	input_pickable = true
+	input_pickable = true
+	input_event.connect(_on_input_event)
 
 
 func _on_button_pressed():
@@ -25,21 +26,15 @@ func _on_button_pressed():
 
 func sync_area_to_polygon():
 	$CollisionPolygon2D.polygon = $Polygon2D.polygon
-
-func _on_mouse_entered():
-	mouse_inside = true
-
-func _on_mouse_exited():
-	mouse_inside = false
 	
 
 
 func snap_piece():
 	var overlapping = get_overlapping_areas()
 	for area in overlapping:
-		if Global.data.get_adjacency(index, area.index):
+		if puzzle_data.get_adjacency(index, area.index):
 			print(index, " is adjacent to ", area.index)
-			var snap_offset = Global.data.puzzle_graph[index] - Global.data.puzzle_graph[area.index]
+			var snap_offset = puzzle_data.puzzle_graph[index] - puzzle_data.puzzle_graph[area.index]
 			var target = area.global_position + snap_offset
 			print("position: ", global_position, " target: ", target)
 			var inside = is_inside_polygon(target)
@@ -59,7 +54,7 @@ func snap_piece():
 				get_parent().add_child(new_connection)
 				reparent(new_connection)
 				area.reparent(new_connection)
-				Global.data.clear_adjacency(index, area.index)
+				puzzle_data.clear_adjacency(index, area.index)
 				is_grouped = true
 				area.is_grouped = true
 				break
@@ -81,7 +76,7 @@ func snap_to_grouped(grouped: Area2D, target: Vector2):
 	reparent(group)
 	is_grouped = true
 	for piece in group.get_children():
-		Global.data.clear_adjacency(index, piece.index)
+		puzzle_data.clear_adjacency(index, piece.index)
 	
 func snap_grouped_to_single(other: Area2D, target: Vector2):
 	var group = get_parent()
@@ -89,7 +84,7 @@ func snap_grouped_to_single(other: Area2D, target: Vector2):
 	set_group_position(target, snap_group_offset)
 	other.is_grouped = true
 	for piece in group.get_children():
-		Global.data.clear_adjacency(other.index, piece.index)
+		puzzle_data.clear_adjacency(other.index, piece.index)
 	other.reparent(group)
 	
 	
@@ -101,26 +96,31 @@ func snap_groups(other: Area2D, target):
 	
 	for i in group.get_children():
 		for j in other_group.get_children():
-			Global.data.clear_adjacency(i.index, j.index)
+			puzzle_data.clear_adjacency(i.index, j.index)
 		i.reparent(other_group)
 
-
-func _input(event):
-	if not is_dragging and mouse_inside and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
-		get_viewport().set_input_as_handled()
+func _on_input_event(viewport, event, shape_idx) -> void:
+	print("input event")
+	if event is InputEventMouseButton \
+	and event.button_index == MOUSE_BUTTON_LEFT \
+	and event.pressed:
+		is_dragging = true
+		drag_offset = global_position - get_global_mouse_position()
+		
 		if is_grouped:
-			connection_offset = get_parent().position - get_global_mouse_position()
+			connection_offset = get_parent().global_position - get_global_mouse_position()
 			for piece in get_parent().get_children():
 				piece.move_to_front()
 		else:
-			connection_offset = Vector2.ZERO
 			move_to_front()
-		print("click. Index: ", index)
-		drag_offset = position - get_global_mouse_position()
-		is_dragging = true
-			
-	elif is_dragging and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released():
-		print("release. Index: ", index)
+
+		get_viewport().set_input_as_handled()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if is_dragging \
+	and event is InputEventMouseButton \
+	and event.button_index == MOUSE_BUTTON_LEFT \
+	and not event.pressed:
 		is_dragging = false
 		snap_piece()
 
