@@ -26,7 +26,10 @@ file_logging/max_log_files=10
 
 [display]
 
+window/size/viewport_width=2000
+window/size/viewport_height=2000
 window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [global_group]
 

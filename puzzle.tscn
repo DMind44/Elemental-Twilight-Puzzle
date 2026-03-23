@@ -3,13 +3,30 @@
 [ext_resource type="Script" uid="uid://bovjmnoimamat" path="res://puzzle.gd" id="1_03ub4"]
 [ext_resource type="Resource" uid="uid://bg8ksnagiqtpc" path="res://puzzle_data.tres" id="2_77j1r"]
 [ext_resource type="Script" uid="uid://dmxfmbxc81utd" path="res://camera_controller.gd" id="3_hgotr"]
+[ext_resource type="Texture2D" uid="uid://nmiuwcukhcds" path="res://Elemental_Twilight_Puzzle.png" id="4_q2gwe"]
+[ext_resource type="Texture2D" uid="uid://dws8ur2nvpqy" path="res://Elemental_Twilight_Puzzle_COMPLETED.png" id="5_re6l2"]
 
 [node name="Puzzle" type="Node2D" unique_id=579814574]
 script = ExtResource("1_03ub4")
 puzzle_data = ExtResource("2_77j1r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=552757220]
-zoom = Vector2(0.06, 0.06)
+position = Vector2(0, 1)
+zoom = Vector2(0.505, 0.505)
+limit_left = -2000
+limit_top = -2000
+limit_right = 2000
+limit_bottom = 2000
 script = ExtResource("3_hgotr")
 zoom_speed = 0.01
-initial_zoom = 0.1
+min_zoom = 0.505
+initial_zoom = 0.505
+
+[node name="ElementalTwilightPuzzle" type="Sprite2D" parent="." unique_id=1034966994]
+scale = Vector2(1.1157485, 1.1157485)
+texture = ExtResource("4_q2gwe")
+
+[node name="ElementalTwilightPuzzleCompleted" type="Sprite2D" parent="." unique_id=1045795670]
+visible = false
+position = Vector2(-13, -6)
+texture = ExtResource("5_re6l2")

@@ -1,9 +1,9 @@
 extends Node
 
 @export var puzzle_data : PuzzleData
-const OFFSET = 700
+const OFFSET = 400
 
-const INITIAL_POS = Vector2(-1400, -1400)
+const INITIAL_POS = Vector2(-1000, -1000)
 
 var current_pos = INITIAL_POS
 
