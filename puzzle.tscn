@@ -12,18 +12,18 @@ puzzle_data = ExtResource("2_77j1r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=552757220]
 position = Vector2(0, 1)
-zoom = Vector2(0.505, 0.505)
-limit_left = -2000
-limit_top = -2000
-limit_right = 2000
-limit_bottom = 2000
+zoom = Vector2(0.43, 0.43)
+limit_left = -2330
+limit_top = -2334
+limit_right = 2337
+limit_bottom = 2337
 script = ExtResource("3_hgotr")
 zoom_speed = 0.01
-min_zoom = 0.505
-initial_zoom = 0.505
+min_zoom = 0.43
+initial_zoom = 0.43
 
 [node name="ElementalTwilightPuzzle" type="Sprite2D" parent="." unique_id=1034966994]
-scale = Vector2(1.1157485, 1.1157485)
+scale = Vector2(1.2966506, 1.2966506)
 texture = ExtResource("4_q2gwe")
 
 [node name="ElementalTwilightPuzzleCompleted" type="Sprite2D" parent="." unique_id=1045795670]
